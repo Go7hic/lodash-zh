@@ -451,14 +451,14 @@ _.drop([1, 2, 3], 0);
 
 Creates a slice of `array` with `n` elements dropped from the end.
 
-#### Arguments
+#### 参数
 1. `array` *(Array)*: The array to query.
 2. `[n=1]` *(number)*: The number of elements to drop.
 
-#### Returns
+#### 返回值
 *(Array)*:  Returns the slice of `array`.
 
-#### Example
+#### 例子
 ```js
 _.dropRight([1, 2, 3]);
 // => [1, 2]
