@@ -1,0 +1,22 @@
+{
+  "name": "lodash-zh",
+  "version": "1.0.0",
+  "description": "发现国内有 underscore 的文档，但是没有 lodash 的，因为平时自己要用，所以只能自己动手来弄下 lodash 中文文档",
+  "main": "lodash 分析.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dyygtfx/lodash-zh.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dyygtfx/lodash-zh/issues"
+  },
+  "homepage": "https://github.com/dyygtfx/lodash-zh#readme",
+  "dependencies": {
+    "lodash": "^3.10.1"
+  }
+}
