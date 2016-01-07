@@ -334,25 +334,24 @@
 
 <!-- div -->
 
-## `“Array” Methods`
+## `“Array” 方法`
 
 <!-- div -->
 
 ### <a id="_chunkarray-size1"></a>`_.chunk(array, [size=1])`
 <a href="#_chunkarray-size1">#</a> [&#x24C8;](https://github.com/lodash/lodash/blob/3.10.1/lodash.src.js#L4624 "View in source") [&#x24C9;][1] [&#x24C3;](https://www.npmjs.com/package/lodash.chunk "See the npm package")
 
-Creates an array of elements split into groups the length of `size`.
-If `collection` can't be split evenly, the final chunk will be the remaining
-elements.
 
-#### Arguments
-1. `array` *(Array)*: The array to process.
-2. `[size=1]` *(number)*: The length of each chunk.
+根据 数值 将集合进行块状分割并返回新的数组. 如果 集合 不能均衡的进行分配, 最后不足的部分将放在最后的块中.
 
-#### Returns
-*(Array)*:  Returns the new array containing chunks.
+#### 参数
+1. `array` *(Array)*: 需要处理的数组.
+2. `[size=1]` *(number)*: 每块需要分割的大小.
 
-#### Example
+#### 返回
+*(Array)*:  返回一个包含所有分割块的新的数组.
+
+#### 例子
 ```js
 _.chunk(['a', 'b', 'c', 'd'], 2);
 // => [['a', 'b'], ['c', 'd']]
@@ -369,16 +368,15 @@ _.chunk(['a', 'b', 'c', 'd'], 3);
 ### <a id="_compactarray"></a>`_.compact(array)`
 <a href="#_compactarray">#</a> [&#x24C8;](https://github.com/lodash/lodash/blob/3.10.1/lodash.src.js#L4655 "View in source") [&#x24C9;][1] [&#x24C3;](https://www.npmjs.com/package/lodash.compact "See the npm package")
 
-Creates an array with all falsey values removed. The values `false`, `null`,
-`0`, `""`, `undefined`, and `NaN` are falsey.
+返回一个剔除所有非真值的新数组. false, null, 0, "", undefined, 和 NaN 都是非真值.
 
-#### Arguments
-1. `array` *(Array)*: The array to compact.
+#### 参数
+1. `array` *(Array)*: 需要进行处理的数组.
 
-#### Returns
-*(Array)*:  Returns the new array of filtered values.
+#### 返回
+*(Array)*:  返回剔除假值后的新数组.
 
-#### Example
+#### 例子
 ```js
 _.compact([0, 1, false, 2, '', 3]);
 // => [1, 2, 3]
@@ -392,18 +390,16 @@ _.compact([0, 1, false, 2, '', 3]);
 ### <a id="_differencearray-values"></a>`_.difference(array, [values])`
 <a href="#_differencearray-values">#</a> [&#x24C8;](https://github.com/lodash/lodash/blob/3.10.1/lodash.src.js#L4686 "View in source") [&#x24C9;][1] [&#x24C3;](https://www.npmjs.com/package/lodash.difference "See the npm package")
 
-Creates an array of unique `array` values not included in the other
-provided arrays using [`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)
-for equality comparisons.
+创建一个差异 数组 不包含使用 SameValueZero 方法所提供的数组.
 
-#### Arguments
-1. `array` *(Array)*: The array to inspect.
-2. `[values]` *(...Array)*: The arrays of values to exclude.
+#### 参数
+1. `array` *(Array)*: 需要进行检查的数组
+2. `[values]` *(...Array)*: 需要进行排除的数组.
 
-#### Returns
-*(Array)*:  Returns the new array of filtered values.
+#### 返回
+*(Array)*:  返回一个经筛选后的新数组.
 
-#### Example
+#### 例子
 ```js
 _.difference([1, 2, 3], [4, 2]);
 // => [1, 3]
@@ -417,16 +413,16 @@ _.difference([1, 2, 3], [4, 2]);
 ### <a id="_droparray-n1"></a>`_.drop(array, [n=1])`
 <a href="#_droparray-n1">#</a> [&#x24C8;](https://github.com/lodash/lodash/blob/3.10.1/lodash.src.js#L4716 "View in source") [&#x24C9;][1] [&#x24C3;](https://www.npmjs.com/package/lodash.drop "See the npm package")
 
-Creates a slice of `array` with `n` elements dropped from the beginning.
+根据提供的参数 n 从起始端对 数组 内元素进行丢弃操作.
 
-#### Arguments
-1. `array` *(Array)*: The array to query.
-2. `[n=1]` *(number)*: The number of elements to drop.
+#### 参数
+1. `array` *(Array)*: 需要进行处理的数组
+2. `[n=1]` *(number)*: 需要丢弃的元素个数
 
-#### Returns
-*(Array)*:  Returns the slice of `array`.
+#### 返回
+*(Array)*:   返回丢弃操作后新的数组.
 
-#### Example
+#### 例子
 ```js
 _.drop([1, 2, 3]);
 // => [2, 3]
@@ -449,14 +445,14 @@ _.drop([1, 2, 3], 0);
 ### <a id="_droprightarray-n1"></a>`_.dropRight(array, [n=1])`
 <a href="#_droprightarray-n1">#</a> [&#x24C8;](https://github.com/lodash/lodash/blob/3.10.1/lodash.src.js#L4751 "View in source") [&#x24C9;][1] [&#x24C3;](https://www.npmjs.com/package/lodash.dropright "See the npm package")
 
-Creates a slice of `array` with `n` elements dropped from the end.
+根据所提供的参数 n 对 数组 从尾端元素开始进行丢弃操作.
 
 #### 参数
-1. `array` *(Array)*: The array to query.
-2. `[n=1]` *(number)*: The number of elements to drop.
+1. `array` *(Array)*: 需要处理的数组
+2. `[n=1]` *(number)*: 需要丢弃的元素个数.
 
 #### 返回值
-*(Array)*:  Returns the slice of `array`.
+*(Array)*:  返回丢弃操作后的新数组
 
 #### 例子
 ```js
@@ -481,25 +477,15 @@ _.dropRight([1, 2, 3], 0);
 ### <a id="_droprightwhilearray-predicate_identity-thisarg"></a>`_.dropRightWhile(array, [predicate=_.identity], [thisArg])`
 <a href="#_droprightwhilearray-predicate_identity-thisarg">#</a> [&#x24C8;](https://github.com/lodash/lodash/blob/3.10.1/lodash.src.js#L4812 "View in source") [&#x24C9;][1] [&#x24C3;](https://www.npmjs.com/package/lodash.droprightwhile "See the npm package")
 
-Creates a slice of `array` excluding elements dropped from the end.
-Elements are dropped until `predicate` returns falsey. The predicate is
-bound to `thisArg` and invoked with three arguments: (value, index, array).
-<br>
-<br>
-If a property name is provided for `predicate` the created `_.property`
-style callback returns the property value of the given element.
-<br>
-<br>
-If a value is also provided for `thisArg` the created `_.matchesProperty`
-style callback returns `true` for elements that have a matching property
-value, else `false`.
-<br>
-<br>
-If an object is provided for `predicate` the created `_.matches` style
-callback returns `true` for elements that match the properties of the given
-object, else `false`.
+创建一个从尾端元素进行裁剪后的 数组. 数组中元素的丢弃操作直到 断言(predicate) 的结果为假值. 断言限定 thisArg 并且调用的同时传递三个参数(value,index,array).
 
-#### Arguments
+如果为 断言 提供的是属性名称,则自动创建 _.property 的回调函数，并作为断言依据.
+
+如果也提供了 thisArg 参数 ，则自动创建 _.matchesProperty 的回调函数，并根据回调结果作为断言依据.
+
+如果为 断言 提供的是对象,则自动创建 _.matches 的回调函数，并根据回调结果作为断言依据.
+
+#### 参数
 1. `array` *(Array)*: The array to query.
 2. `[predicate=_.identity]` *(Function|Object|string)*: The function invoked per iteration.
 3. `[thisArg]` *(&#42;)*: The `this` binding of `predicate`.
@@ -8037,4 +8023,3 @@ alternative delimiters.
 <!-- /div -->
 
  [1]: #array "Jump back to the TOC."
-
